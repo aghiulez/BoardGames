@@ -412,6 +412,13 @@ public class ReversiController
 
 
         switchMove();
+
+
+        if ( !game.currentPlayerHasValidMove())
+        {
+            switchMove();
+        }
+
         if ( game.isGameOver() )
         {
             System.out.println("WINNER IS PLAYER: " + game.getWinner());
